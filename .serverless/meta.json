@@ -1,0 +1,56 @@
+{
+  "/home/openweb/nodetest/node-project/template.yml": {
+    "versionFramework": "4.7.0",
+    "servicePath": "/home/openweb/nodetest/node-project/template.yml",
+    "serviceConfigFileName": "template.yml",
+    "service": {
+      "Resources": {
+        "MyFunction": {
+          "Type": "AWS::Serverless::Function",
+          "Properties": {
+            "Handler": "index.handler",
+            "Runtime": "nodejs18.x",
+            "CodeUri": ".",
+            "Events": {
+              "MyApi": {
+                "Type": "Api",
+                "Properties": {
+                  "Path": "/hello",
+                  "Method": "get"
+                }
+              }
+            }
+          }
+        }
+      },
+      "AWSTemplateFormatVersion": "2010-09-09"
+    },
+    "dashboard": {
+      "isEnabledForService": false,
+      "requiredAuthentication": false,
+      "orgFeaturesInUse": null,
+      "orgObservabilityIntegrations": null,
+      "serviceAppId": null,
+      "serviceProvider": null,
+      "instanceParameters": null
+    },
+    "error": {
+      "message": "Failed to resolve AWS account ID: The security token included in the request is invalid",
+      "code": "AWS_ACCOUNT_ID_RESOLUTION_FAILED"
+    },
+    "serviceRawFile": "Resources:\n  MyFunction:\n    Type: AWS::Serverless::Function\n    Properties:\n      Handler: index.handler\n      Runtime: nodejs18.x\n      CodeUri: .\n      Events:\n        MyApi:\n          Type: Api\n          Properties:\n            Path: /hello\n            Method: get",
+    "command": [
+      "deploy"
+    ],
+    "options": {},
+    "orgId": "5ce0c861-fc0a-410d-8f62-45c5a36ac74f",
+    "orgName": "pitangentows",
+    "userId": "WfCSmPTNkXH8bZ9769",
+    "userName": "pitangentows",
+    "serviceProviderAwsCfStackId": null,
+    "serviceProviderAwsCfStackCreated": null,
+    "serviceProviderAwsCfStackUpdated": null,
+    "serviceProviderAwsCfStackStatus": null,
+    "serviceProviderAwsCfStackOutputs": null
+  }
+}
