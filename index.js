@@ -10,11 +10,7 @@ const app = express();
 const config = yaml.load(fs.readFileSync("config.yml", "utf8"));
 
 app.get("/", (req, res) => {
-<<<<<<< HEAD
   res.json({ message: "Hello from Pitangent to lambda !" });
-=======
-  res.json({ message: "Hello from India champions !" });
->>>>>>> b46a5e3cd29fdb798eb2d7091081e999af9828be
 });
 
 const PORT = process.env.PORT || config.server.port;
